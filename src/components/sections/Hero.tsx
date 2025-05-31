@@ -10,7 +10,7 @@ export default function Hero() {
       aria-label="Introduction and overview"
     >
       <h1 className="text-4xl sm:text-6xl font-extrabold mb-4 drop-shadow-lg">
-        Hi, I'm <span className="text-yellow-300">[Your Name]</span>
+        Hi, I'm <span className="text-yellow-300">Brian Pham</span>
       </h1>
       <p className="max-w-xl text-lg sm:text-xl mb-8 drop-shadow-md">
         I’m a Frontend Developer specializing in building accessible, performant, and beautiful web experiences.
