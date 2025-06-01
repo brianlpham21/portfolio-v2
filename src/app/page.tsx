@@ -5,6 +5,26 @@ import WorkTimeline from "@/components/sections/WorkTimeline";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 
+// TODO:
+// - apply accessibility design
+// - apply mobile first design
+// - apply light/dark theming
+// - build out reusable ui components
+// - display SSR capability of site
+// - display lazy loading and performance of site
+// - lighthouse active display - research
+// - add minimal redux state management to show ability
+// - add a nextjs backend
+// - input work experience information
+// - input project information
+// - figure out best way to display skills
+//   - input skills
+// - create contact form with form and validation
+// - figure out how to create hero section with playful interactive animation
+// - style header
+// - style footer
+// - edit about me section
+// - add unit testing
 
 export default function Home() {
   return (
