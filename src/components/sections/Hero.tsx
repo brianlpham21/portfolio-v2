@@ -1,5 +1,3 @@
-// src/components/sections/Hero.tsx
-
 import React from 'react'
 
 export default function Hero() {

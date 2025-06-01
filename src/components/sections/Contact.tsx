@@ -1,5 +1,3 @@
-// src/components/sections/Contact.tsx
-
 import React from 'react'
 
 import Button from "@/components/ui/Button";

@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6" aria-label="Primary Navigation">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between py-2 px-4 md:py-3 md:px-6" aria-label="Primary Navigation">
         <Link href="/" className="text-2xl font-bold text-indigo-700">
           Brian
         </Link>

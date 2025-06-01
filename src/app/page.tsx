@@ -8,15 +8,15 @@ import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[16px] row-start-2 items-center sm:items-start">
+     <main className="relative min-h-screen overflow-x-hidden bg-white text-gray-900 dark:bg-gray-950 dark:text-white">
+      <div className="container mx-auto px-4 max-w-7xl space-y-32 pt-20 pb-16">
         <Hero />
         <About />
         <Skills />
         <WorkTimeline />
         <Projects />
         <Contact />
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
