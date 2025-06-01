@@ -8,7 +8,6 @@ import Contact from "@/components/sections/Contact";
 // TODO:
 // - apply accessibility design
 // - apply mobile first design
-// - apply light/dark theming
 // - build out reusable ui components
 // - display SSR capability of site
 // - display lazy loading and performance of site
@@ -28,7 +27,7 @@ import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-     <main className="relative min-h-screen overflow-x-hidden bg-white text-gray-900 dark:bg-gray-950 dark:text-white">
+    <main className="relative min-h-screen overflow-x-hidden bg-white text-gray-900 dark:bg-gray-950 dark:text-white transition-colors duration-500">
       <div className="container mx-auto px-4 max-w-7xl space-y-32 pt-20 pb-16">
         <Hero />
         <About />
