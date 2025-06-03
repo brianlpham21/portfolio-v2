@@ -1,14 +1,40 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import React, { useState } from "react";
+
+
 import ThemeToggle from "../ui/ThemeToggle";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hideHeader, setHideHeader] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setHideHeader(true); // scrolling down
+      } else {
+        setHideHeader(false); // scrolling up
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <header
+      className={`bg-white shadow-md fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+        hideHeader ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <nav
         className="max-w-7xl mx-auto flex items-center justify-between py-2 px-4 md:py-3 md:px-6"
         aria-label="Primary Navigation"
@@ -19,7 +45,6 @@ export default function Header() {
         >
           Brian
         </Link>
-        <ThemeToggle />
 
         {/* Desktop menu */}
         <ul className="hidden md:flex space-x-8 text-indigo-700 font-medium">
@@ -46,6 +71,9 @@ export default function Header() {
             >
               Contact
             </Link>
+          </li>
+          <li>
+            <ThemeToggle />
           </li>
         </ul>
 

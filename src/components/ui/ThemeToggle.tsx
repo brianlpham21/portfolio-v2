@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Button from "./Button";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -9,14 +10,14 @@ export default function ThemeToggle() {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null; // avoid hydration mismatch
+  if (!mounted) return null;
 
   return (
-    <button
+    <Button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="p-2 rounded-md border border-gray-300 dark:border-gray-600"
     >
       {theme === "dark" ? "Light" : "Dark"}
-    </button>
+    </Button>
   );
 }
